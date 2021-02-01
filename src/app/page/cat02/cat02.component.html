@@ -1,4 +1,12 @@
 <h3 class="text-center my-5">Kiemelt ajánlatunk</h3>
 <app-product-paging [featuredList]="featuredList"></app-product-paging>
+
+<div class="input mt-5">
+    <form class="form-inline my-3 my-lg-0">
+        <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+
 <h3 class="text-center my-5">Teljes termék lista</h3>
-<app-product-paging [cat02Products]="cat02Products"></app-product-paging>
+<app-product-list [phrase]="phrase" [cat02Products]="cat02Products"></app-product-list>

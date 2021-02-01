@@ -12,6 +12,8 @@ export class ProductListComponent implements OnInit {
 
   @Input() productList: Product[];
   @Input() actionProducts: Product[];
+  @Input() cat02Products: Product[];
+  @Input() cat01Products: Product[];
   @Input() phrase: string = '';
   constructor() { }
 

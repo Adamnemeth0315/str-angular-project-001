@@ -1,26 +1,7 @@
 <div class="container-fluid">
     <div class="row ">
-
-        <div class="d-flex justify-content-center col-md-6 col-lg-2 mx-auto">
-            <div *ngFor="let product of featuredList">
-                <app-product-card [product]="product"></app-product-card>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="offset-lg-1" *ngFor="let product of cat02Products">
+        <div class="mb-3 mx-auto" *ngFor="let product of featuredList">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
-
-
-    <div class="row">
-        <div class="offset-lg-1" *ngFor="let product of cat01Products">
-            <app-product-card [product]="product"></app-product-card>
-        </div>
-    </div>
-
-
-
 </div>

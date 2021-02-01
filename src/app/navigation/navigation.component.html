@@ -1,31 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
-  <a
-    class="navbar-brand"
-    routerLink="/"
-  >{{ appName }}</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+  <a class="navbar-brand" routerLink="/">{{ appName }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div
-    class="collapse navbar-collapse"
-    id="navbarSupportedContent"
-  >
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li *ngFor="let item of menuItems" class="nav-item">
-        <a
-          class="nav-link text-white"
-          [routerLink]="item.link"
-        >{{ item.text }}</a>
+        <a class="nav-link text-white" [routerLink]="item.link">{{ item.text }}</a>
       </li>
     </ul>
+  </div>
+
+  <div>
+    <form class="form-inline my-2 my-lg-0">
+      <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>

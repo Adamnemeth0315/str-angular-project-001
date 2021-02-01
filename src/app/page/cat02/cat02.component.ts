@@ -16,6 +16,7 @@ export class Cat02Component implements OnInit {
   featuredList = this.topFiveFeaturedProducts;
   productList: Product[] = this.productService.list;
   cat02Products = this.allProductsInCategory(2);
+  phrase = '';
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -24,4 +25,9 @@ export class Cat02Component implements OnInit {
   allProductsInCategory(catId: number): Product[] {
     return this.productService.list.filter(product => product.catId == catId);
   }
+
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
+
 }

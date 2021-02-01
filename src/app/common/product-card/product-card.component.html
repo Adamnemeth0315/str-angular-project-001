@@ -30,7 +30,7 @@
 
 
 
-<div id="juli" class="card shadow-sm mx-2 mb-3">
+<!-- <div id="juli" class="card shadow-sm mx-2 mb-3">
   <div id="picture">
     <img src="{{product.image}}" class="card-img-top " alt="book">
   </div>
@@ -48,5 +48,26 @@
     <div class="card-body text-center">
       <a href="#" class="card-link mx-auto px-auto text-center"><strong>Kosárba</strong></a>
     </div>
+  </div>
+</div> -->
+
+<div id="juli" class="card shadow-sm mx-2 mb-3 h-100" style="width: 16rem">
+
+  <img src="{{product.image}}" class="card-img-top" alt="book">
+
+  <div id="bookCardText" class="card-body d-flex flex-column text-center">
+    <h5 class="card-title ml-0  text-center">
+      <p class="card-text mb-0"><small>{{product.author}}</small></p>
+      <p class="mb-0">{{product.title}}</p>
+    </h5>
+
+    <p>{{product.description}}</p>
+
+
+    <p>Ár: {{product.price}} Ft</p>
+
+
+    <a href="#" class="card-link mt-auto"><strong>Kosárba</strong></a>
+
   </div>
 </div>

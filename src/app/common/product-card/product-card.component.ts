@@ -12,6 +12,7 @@ import { ProductCard } from '../product-card';
 })
 export class ProductCardComponent implements OnInit {
   @Input() product: Product;
+  @Input() actionPrices: number;
   // @Input() productService: ProductService;
 
   //productCard: ProductCard = new ProductCard();

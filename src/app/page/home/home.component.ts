@@ -20,9 +20,12 @@ export class HomeComponent implements OnInit {
   actionProducts = this.fiveRandomActionProductsInCategory();
   featuredList = this.topFiveFeaturedProducts;
   phrase = '';
+  /* actionPrices = this.productService.price * (1 - .3); */
+
 
   /*   featuredList = this.allProductsInCategory(2); */
   productList: Product[] = this.productService.list;
+  price: number;
 
   constructor(private productService: ProductService) { }
 

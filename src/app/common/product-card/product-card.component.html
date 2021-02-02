@@ -1,56 +1,3 @@
-<!-- <section id="cardSection" class="py-5">
-<div class="container"> -->
-<!-- <div id="juli" class="col-md-5 card flex-row shadow-sm" style="width: 100rem">
-    <div id="picture" class="col-4">
-      
-      <img src= "{{product.image}}" class="card-img-top " alt="book">   
-        <img src= "{{product.image}}" class="card-img-top " alt="book">    
-    </div>
-      <div class="col-7 card-body text-center px-1">
-        <h5 class="card-title mb-5 text-center">                 
-          <p class="card-text"><small>{{product.author}}</small></p>
-          <p>{{product.title}}</p>
-        </h5>
-        <div class="card-body text-center description px-1">
-            <p>{{product.description}}</p>
-        </div>
-        <div class="card-body text-center px-1">
-            <p>Ár: {{product.price}} Ft</p>
-        </div>
-        
-        <div class="card-body text-center px-1">
-          <a href="#" class="card-link"><strong>Kosárba</strong></a>
-          
-        </div>
-      </div>
-    </div> -->
-
-<!-- </div> -->
-<!-- </section>  -->
-
-
-
-<!-- <div id="juli" class="card shadow-sm mx-2 mb-3">
-  <div id="picture">
-    <img src="{{product.image}}" class="card-img-top " alt="book">
-  </div>
-  <div id="bookCardText" class="card-body text-center">
-    <h5 class="card-title ml-0 mt-0 text-center">
-      <p class="card-text mb-0"><small>{{product.author}}</small></p>
-      <p class="mb-0">{{product.title}}</p>
-    </h5>
-    <div class="card-body text-center description">
-      <p>{{product.description}}</p>
-    </div>
-    <div class="card-body text-center">
-      <p>Ár: {{product.price}} Ft</p>
-    </div>
-    <div class="card-body text-center">
-      <a href="#" class="card-link mx-auto px-auto text-center"><strong>Kosárba</strong></a>
-    </div>
-  </div>
-</div> -->
-
 <div id="juli" class="card shadow-sm mx-2 mb-3 h-100" style="width: 16rem">
 
   <img src="{{product.image}}" class="card-img-top" alt="book">
@@ -64,7 +11,8 @@
     <p>{{product.description}}</p>
 
 
-    <p class="strike-through" [style.display]="product.action? 'none':'block'">Eredeti ár: {{actionPrice}} Ft</p>
+    <p class="strike-through" [style.display]="product.action ? 'block':'none'">Eredeti ár: {{actionPrices}} Ft
+    </p>
     <p>Ár: {{product.price}} Ft</p>
     <!-- <p class="strike-through" [style.display]="product.action? 'none':'block'">Eredeti ár: {{product.price}} Ft</p>
     <p>Ár: {{actionPrice}} Ft</p> -->

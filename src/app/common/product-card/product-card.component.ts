@@ -12,11 +12,11 @@ import { ProductCard } from '../product-card';
 })
 export class ProductCardComponent implements OnInit {
   @Input() product: Product;
-  // @Input() productService: ProductService;
+  //@Input() productService: ProductService;
 
   //productCard: ProductCard = new ProductCard();
 
-  // const actionPrice = this.price * (1 - .3 * this.action);
+  //const actionPrice = this.price * (1 - .3 * this.action);
 
   constructor() {
 

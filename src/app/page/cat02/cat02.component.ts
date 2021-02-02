@@ -13,7 +13,11 @@ export class Cat02Component implements OnInit {
     .sort(() => 0.5 - Math.random())
     .slice(0, 5);
 
-  featuredList = this.topFiveFeaturedProducts;
+  // featuredList = this.topFiveFeaturedProducts;
+  featuredList = this.allProductsInCategory(2)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
+
   productList: Product[] = this.productService.list;
   cat02Products = this.allProductsInCategory(2);
   phrase = '';

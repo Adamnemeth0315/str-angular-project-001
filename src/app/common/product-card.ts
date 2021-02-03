@@ -10,6 +10,7 @@ export class ProductCard {
     description: string;
     price: number;
     stock: number;
+    action: boolean;
 
     constructor(properties?: ProductCard) {
         if (properties) {
@@ -20,6 +21,7 @@ export class ProductCard {
             this.description = properties.description;
             this.price = properties.price;
             this.stock = properties.stock;
+            this.action = properties.action;
         }
     }
     /* productList: Product[] = this.productService.list;

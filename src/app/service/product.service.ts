@@ -104,7 +104,7 @@ export class ProductService {
       image: "assets/img/19.jpg", price: 9877, stock: 1, featured: true, active: true, action: false
     },
     {
-      id: 20, catId: 1, title: "Stargate: Continuum", author: "Muriel Fodden",
+      id: 20, catId: 1, title: "Szikomorfán születtem", author: "Muriel Fodden",
       description: "Vestibulum rutrum rutrum neque.",
       image: "assets/img/20.jpg", price: 8495, stock: 9, featured: true, active: true, action: true
     },
@@ -134,12 +134,12 @@ export class ProductService {
       image: "assets/img/25.jpg", price: 7724, stock: 6, featured: true, active: true, action: true
     },
     {
-      id: 26, catId: 1, title: "Jacket, The", author: "Howard Slee",
+      id: 26, catId: 1, title: "Csillag a viharhegyen", author: "Howard Slee",
       description: "Phasellus in felis. Donec semper sapien a libero.",
       image: "assets/img/26.jpg", price: 5297, stock: 4, featured: false, active: false, action: false
     },
     {
-      id: 27, catId: 1, title: "Living in Oblivion", author: "Carlyle Stilliard",
+      id: 27, catId: 1, title: "PIP és a barátság mancsa", author: "Carlyle Stilliard",
       description: "Pellentesque at nulla. Suspendisse potenti.",
       image: "assets/img/27.jpg", price: 5037, stock: 2, featured: true, active: false, action: false
     },
@@ -184,7 +184,7 @@ export class ProductService {
       image: "assets/img/35.jpg", price: 2444, stock: 5, featured: true, active: true, action: false
     },
     {
-      id: 36, catId: 1, title: "Sommerset", author: "Even Lagen",
+      id: 36, catId: 1, title: "Somerset", author: "Even Lagen",
       description: "Sed accumsan felis. Ut at dolor quis odio consequat varius.",
       image: "assets/img/36.jpg", price: 3227, stock: 0, featured: true, active: true, action: true
     },

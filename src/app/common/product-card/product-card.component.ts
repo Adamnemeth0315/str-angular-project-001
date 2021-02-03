@@ -9,6 +9,12 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
+<<<<<<< HEAD
+=======
+  @Input() product: Product;
+  @Input() actionPrices: number;
+  // @Input() productService: ProductService;
+>>>>>>> origin/dev
 
   @Input() productService: ProductService;
 

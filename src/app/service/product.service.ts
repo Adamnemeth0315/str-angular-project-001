@@ -283,6 +283,7 @@ export class ProductService {
       description: "Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
       image: "assets/img/58.jpg", price: 6001, stock: 7, featured: false, active: true, action: false
     }]
+  price: number;
 
   constructor() { }
 

@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
-import { ProductCard } from '../product-card';
-
 
 
 @Component({
@@ -11,19 +9,18 @@ import { ProductCard } from '../product-card';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: Product;
-  // @Input() productService: ProductService;
 
-  //productCard: ProductCard = new ProductCard();
+  @Input() productService: ProductService;
 
-  // const actionPrice = this.price * (1 - .3 * this.action);
-
-  constructor() {
-
+  @Input() set product(value: Product) {
+    this.actionPrice = value.action ? .7 * value.price : value.price;
   }
 
-  ngOnInit(): void {
+  actionPrice: number = 0;
 
+  constructor() { }
+
+  ngOnInit(): void {
   }
 
 

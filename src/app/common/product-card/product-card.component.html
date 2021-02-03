@@ -1,28 +1,18 @@
 <div id="juli" class="card shadow-sm mx-2 mb-3 h-100" style="width: 16rem">
 
-  <img src="{{product.image}}" class="card-img-top" alt="book">
+  <img src="{{origProduct.image}}" class="card-img-top" alt="book">
 
   <div id="bookCardText" class="card-body d-flex flex-column text-center">
     <h5 class="card-title ml-0  text-center">
-      <p class="card-text mb-0"><small>{{product.author}}</small></p>
-      <p class="mb-0">{{product.title}}</p>
+      <p class="card-text mb-0"><small>{{origProduct.author}}</small></p>
+      <p class="mb-0">{{origProduct.title}}</p>
     </h5>
 
-    <p>{{product.description}}</p>
+    <p>{{origProduct.description}}</p>
 
-
-<<<<<<< HEAD
-    <!-- <p class="strike-through" [style.display]="product.action? 'none':'block'">Eredeti ár: {{actionPrice}} Ft</p> -->
-    <p class="strike-through" [style.display]="product.action? 'none':'block'">Eredeti ár: {{product.price}} Ft</p>
-    <p>Ár: {{actionPrice}} Ft</p>
-=======
-    <p class="strike-through" [style.display]="product.action ? 'block':'none'">Eredeti ár: {{actionPrices}} Ft
+    <p class="strike-through" [style.display]="origProduct.action ? 'block':'none'">Eredeti ár: {{origProduct.price}} Ft
     </p>
-    <p>Ár: {{product.price}} Ft</p>
->>>>>>> origin/dev
-    <!-- <p class="strike-through" [style.display]="product.action? 'none':'block'">Eredeti ár: {{product.price}} Ft</p>
-    <p>Ár: {{actionPrice}} Ft</p> -->
-
+    <p>Ár: {{actionPrice}} Ft</p>
 
     <a href="#" class="card-link mt-auto"><strong>Kosárba</strong></a>
 

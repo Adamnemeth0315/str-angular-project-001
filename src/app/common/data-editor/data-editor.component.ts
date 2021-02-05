@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Product } from 'src/app/model/product';
@@ -13,6 +13,8 @@ import { ProductService } from 'src/app/service/product.service';
 export class DataEditorComponent implements OnInit {
 
   @Input() productList$: Observable<Product[]>;
+  @Output() updateClick: EventEmitter<Product> = new EventEmitter();
+  @Output() deleteClick: EventEmitter<Product> = new EventEmitter();
   cols: ITableCol[] = this.config.tableCols;
 
   constructor(
@@ -24,11 +26,19 @@ export class DataEditorComponent implements OnInit {
   }
 
   onUpdate(product: Product): void {
+    this.updateClick.emit(product);
+  }
+
+  onDelete(product: Product): void {
+    this.deleteClick.emit(product);
+  }
+
+ /*  onUpdate(product: Product): void {
     this.productService.update(product).subscribe(updatedProduct => console.log(updatedProduct));
   }
 
   onDelete(product: Product): void {
     this.productService.update(product).subscribe(() => console.log('deleted'));
-  }
+  } */
 
 }

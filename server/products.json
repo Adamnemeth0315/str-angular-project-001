@@ -1,19 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "catId": 2,
-      "title": "Stay",
-      "author": "Raynor Besson",
-      "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
-      "image": "assets/img/01.jpg",
-      "price": 8239,
-      "stock": 7,
-      "featured": true,
-      "active": true,
-      "action": true
-    },
-    {
       "id": 2,
       "catId": 2,
       "title": "Stratton Story, The",
@@ -62,32 +49,6 @@
       "price": 3886,
       "stock": 3,
       "featured": false,
-      "active": true,
-      "action": true
-    },
-    {
-      "id": 6,
-      "catId": 2,
-      "title": "Garden Lovers (Eedenistä pohjoiseen)",
-      "author": "Ewen Dabel",
-      "description": "Nunc rhoncus dui vel sem. Mauris sit amet eros.",
-      "image": "assets/img/06.jpg",
-      "price": 9647,
-      "stock": 1,
-      "featured": true,
-      "active": false,
-      "action": true
-    },
-    {
-      "id": 7,
-      "catId": 2,
-      "title": "The Trip to Squash Land",
-      "author": "Kirbee Jersh",
-      "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.",
-      "image": "assets/img/07.jpg",
-      "price": 3176,
-      "stock": 3,
-      "featured": true,
       "active": true,
       "action": true
     },

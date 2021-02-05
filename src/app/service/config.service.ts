@@ -17,6 +17,7 @@ export class ConfigService {
     { text: 'Home', link: '/', icon: 'home' },
     { text: 'Ifjúsági', link: '/ifjusagi' },
     { text: 'Felnőtt', link: '/felnott' },
+    { text: 'Admin', link: '/admin' },
   ];
 
   constructor() { }

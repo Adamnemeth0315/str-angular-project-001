@@ -1,18 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of productList  | filter:phrase:'title'">
+        <div class="mb-3 mx-auto" *ngFor="let product of productList | async | filter:phrase:'title'">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
 
     <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of actionProducts">
+        <div class="mb-3 mx-auto" *ngFor="let product of actionProducts | async">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
 
     <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of cat02Products | filter:phrase:'title'">
+        <div class="mb-3 mx-auto" *ngFor="let product of cat02Products| async | filter:phrase:'title'">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>

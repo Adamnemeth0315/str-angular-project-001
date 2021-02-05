@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
   /*   featuredList = this.allProductsInCategory(2); */
   /* productList: Product[] = this.productService.list; */
-  productList$: Observable<Product[]> = this.productService.getAll();
+  productList: Observable<Product[]> = this.productService.getAll();
   price: number;
 
   constructor(private productService: ProductService) { }

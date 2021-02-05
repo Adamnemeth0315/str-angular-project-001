@@ -10,7 +10,7 @@ import { Product } from '../model/product';
 })
 export class ProductService {
 
-  apiUrl: string = 'http://localhost:3000/users';
+  apiUrl: string = 'http://localhost:3000/products';
   catId: number;
   list: Product[] = [
     {

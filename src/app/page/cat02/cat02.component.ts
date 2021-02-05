@@ -7,6 +7,7 @@ import { ProductService } from 'src/app/service/product.service';
   templateUrl: './cat02.component.html',
   styleUrls: ['./cat02.component.scss']
 })
+
 export class Cat02Component implements OnInit {
 
  /*  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)

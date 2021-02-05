@@ -11,6 +11,7 @@ import { Product } from '../model/product';
 
 export class ProductService {
 
+
   apiUrl: string = 'http://localhost:3000/products';
   catId: number;
   // list: Product[] = [
@@ -367,6 +368,7 @@ export class ProductService {
   //     array.map(item => item.image = "/src/assets/img/" + item.image);
   //   return array;
   // }
+
 
 
 }

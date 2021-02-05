@@ -298,9 +298,9 @@ export class ProductService {
     return this.http.get<Product[]>(this.apiUrl);
   }
 
-  // get(user: User): Observable<User> {
-  //   return this.http.get<User>(`${this.apiUrl}/${user.id}`);
-  // }
+  get(product: Product): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/${product.id}`);
+  }
 
   // create(user: User): Observable<User> {
   //   return this.http.post<User>(this.apiUrl, user);

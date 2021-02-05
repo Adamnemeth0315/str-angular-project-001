@@ -15,6 +15,7 @@ import { ProductPagingComponent } from './common/product-paging/product-paging.c
 import { FilterPipe } from './pipe/filter.pipe';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { CategoryPipe } from './pipe/category.pipe';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DataEditorComponent } from './common/data-editor/data-editor.component'
     ProductPagingComponent,
     FilterPipe,
     AdminComponent,
-    DataEditorComponent
+    DataEditorComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

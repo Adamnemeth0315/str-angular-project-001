@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Product } from 'src/app/model/product';
 import { ConfigService, ITableCol } from 'src/app/service/config.service';
@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class DataEditorComponent implements OnInit {
 
-  productList$: Observable<Product[]> = this.productService.getAll();
+  @Input() productList$: Observable<Product[]>;
   cols: ITableCol[] = this.config.tableCols;
 
   constructor(

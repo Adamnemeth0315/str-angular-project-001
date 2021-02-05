@@ -17,6 +17,7 @@ export class ProductListComponent implements OnInit {
   @Input() phrase: string = '';
   constructor() { }
 
+
   ngOnInit(): void {
   }
   /* Filter

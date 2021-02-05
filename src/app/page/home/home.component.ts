@@ -61,6 +61,7 @@ export class HomeComponent implements OnInit {
       myCard.price = myProduct.price;
       myCard.stock = myProduct.stock;
     };
+
     return myCard;
   }
 

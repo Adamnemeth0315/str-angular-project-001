@@ -14,6 +14,7 @@ export class Cat01Component implements OnInit {
     .sort(() => 0.5 - Math.random())
     .slice(0, 5);
 
+
   // featuredList = this.topFiveFeaturedProducts;
   featuredList = this.allProductsInCategory(1)
     .sort(() => 0.5 - Math.random())

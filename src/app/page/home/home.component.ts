@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ProductCard } from 'src/app/common/product-card';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
     .sort(() => 0.5 - Math.random())
     .slice(0, 5);
 
-  product = this.getCard(1);
+  /* product = this.getCard(1); */
   productsCategory = this.allProductsInCategory(1);
   actionProducts = this.fiveRandomActionProductsInCategory();
   featuredList = this.topFiveFeaturedProducts;
@@ -24,7 +25,8 @@ export class HomeComponent implements OnInit {
 
 
   /*   featuredList = this.allProductsInCategory(2); */
-  productList: Product[] = this.productService.list;
+  /* productList: Product[] = this.productService.list; */
+  productList$: Observable<Product[]> = this.productService.getAll();
   price: number;
 
   constructor(private productService: ProductService) { }
@@ -49,9 +51,12 @@ export class HomeComponent implements OnInit {
       .slice(0, 5);
   }
 
-  getCard(id: number): ProductCard {
+  
+
+ /*  getCard(id: number): ProductCard {
     const myCard = new ProductCard();
-    const myProduct = this.productService.list.find(item => item.id == id);
+    const myProduct = this.productService.list.find(item => item.id == id); 
+    const myProduct = this.productService.get()
     if (myProduct) {
       myCard.id = myProduct.id;
       myCard.author = myProduct.author;
@@ -62,7 +67,7 @@ export class HomeComponent implements OnInit {
       myCard.stock = myProduct.stock;
     };
     return myCard;
-  }
+  } */
 
   productsWithPath(method: Function, id: number): Product[] {
     const array: any = method(id);

@@ -25,7 +25,7 @@ export class AdminComponent implements OnInit {
   }
 
   onDelete(product: Product): void {
-    this.productService.update(product).subscribe(() => console.log('deleted'));
+    this.productService.remove(product).subscribe(() => console.log('deleted'));
   }
 }
 

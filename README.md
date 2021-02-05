@@ -132,4 +132,5 @@ Az alkalmazás már rendelkezik a ProductService szolgáltatással, ezt kell tov
 Készítsetek metódusokat, amelyek lekérik az összes terméket, frissítenek, törölnek bizonyos termékeket az adatbázisból. (getAll, update, remove).
 Ezek mind a json-server szabványos kéréseit használják az adatok valós frissítésére.
 A getAll esetén nem kell paraméter, mivel itt az összes terméket le akarjuk kérni, de az update és remove metódusoknak át kell adni az adott terméket, hogy az id alapján meg tudjuk határoni, hogy a szerver melyiket frissítse vagy törölje.
+
 Sok sikert!

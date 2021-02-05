@@ -9,26 +9,27 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class Cat02Component implements OnInit {
 
-  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
+ /*  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
     .sort(() => 0.5 - Math.random())
-    .slice(0, 5);
+    .slice(0, 5); */
 
   // featuredList = this.topFiveFeaturedProducts;
-  featuredList = this.allProductsInCategory(2)
+ /*  featuredList = this.allProductsInCategory(2)
     .sort(() => 0.5 - Math.random())
-    .slice(0, 5);
-
+    .slice(0, 5); */
+/* 
   productList: Product[] = this.productService.list;
-  cat02Products = this.allProductsInCategory(2);
+  cat02Products = this.allProductsInCategory(2); */
   phrase = '';
+  catId = 2;
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
   }
-
+/* 
   allProductsInCategory(catId: number): Product[] {
     return this.productService.list.filter(product => product.catId == catId);
-  }
+  } */
 
   onChangePhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;

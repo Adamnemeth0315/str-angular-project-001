@@ -15,6 +15,8 @@ export class ProductListComponent implements OnInit {
   @Input() cat02Products: Product[];
   @Input() cat01Products: Product[];
   @Input() phrase: string = '';
+  @Input() catId: number = 1 ;
+
   constructor() { }
 
   ngOnInit(): void {

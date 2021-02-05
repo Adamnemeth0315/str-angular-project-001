@@ -12,7 +12,7 @@
     </div>
 
     <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of cat02Products| async | filter:phrase:'title'">
+        <div class="mb-3 mx-auto" *ngFor="let product of cat02Products| async | filter:phrase:'title' | filter:catId">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>

@@ -20,4 +20,12 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onUpdate(product: Product): void {
+    this.productService.update(product).subscribe(updatedProduct => console.log(updatedProduct));
+  }
+
+  onDelete(product: Product): void {
+    this.productService.update(product).subscribe(() => console.log('deleted'));
+  }
 }
+

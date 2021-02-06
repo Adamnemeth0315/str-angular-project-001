@@ -1,29 +1,39 @@
+<!-- Ez a komponens hasonlóan működik, mint a terméklapozó, de ez korlátlan számú terméket képes megjeleníteni.
+- Működése: input tulajdonságként kapja meg a termékek tömbjét. Ezeket bejárva (*ngFor)
+minden terméket egy product-card komponenssel jelenít meg. -->
+
+<!-- - RESZPONZIVITÁS: mobil nézetben 1, tablet nézetben 2 és asztali nézetben 5 termék
+jelenjen meg egymás mellett. A menüt már megoldottam. -->
+
 <div class="container-fluid">
     <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of productList | async | filter:phrase:'title'">
+        <div class="col-12 d-flex flex-wrap justify-content-center">
+            <!-- <div class="mb-3 mx-auto" *ngFor="let product of productList | onAction  | filter:phrase:'title'"> -->
+            <div class="mb-3" *ngFor="let product of productList">
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="mb-3 mx-auto" *ngFor="let product of productList | onAction">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
 
     <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of actionProducts | async">
+        <div class="mb-3 mx-auto" *ngFor="let product of productList | category:2 | filter:phrase:'title'">
             <app-product-card [product]="product"></app-product-card>
         </div>
-    </div>
+    </div> -->
 
-    <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of cat02Products| async | filter:phrase:'title' | filter:catId">
+
+
+
+    <!-- <div class="row">
+        <div class="mb-3 mx-auto" *ngFor="let product of productList | category:1 | filter:phrase:'title'">
             <app-product-card [product]="product"></app-product-card>
         </div>
-    </div>
-
-
-
-
-    <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of cat01Products | filter:phrase:'title'">
-            <app-product-card [product]="product"></app-product-card>
-        </div>
-    </div>
+    </div> -->
 
 </div>

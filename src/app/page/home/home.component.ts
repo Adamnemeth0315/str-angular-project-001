@@ -12,21 +12,21 @@ import { ProductService } from 'src/app/service/product.service';
 export class HomeComponent implements OnInit {
 
 
- /*  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
+  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
     .sort(() => 0.5 - Math.random())
-    .slice(0, 5); */
+    .slice(0, 5);
 
-  /* product = this.getCard(1); */
-  /* productsCategory = this.allProductsInCategory(1);
+  product = this.getCard(1);
+  productsCategory = this.allProductsInCategory(1);
   actionProducts = this.fiveRandomActionProductsInCategory();
-  featuredList = this.topFiveFeaturedProducts; */
+  featuredList = this.topFiveFeaturedProducts;
   phrase = '';
   /* actionPrices = this.productService.price * (1 - .3); */
 
 
   /*   featuredList = this.allProductsInCategory(2); */
-  /* productList: Product[] = this.productService.list; */
-  productList: Observable<Product[]> = this.productService.getAll();
+  productList$: Observable<Product[]> = this.productService.getAll();
+  productList: Product[] = this.productService.list;
   price: number;
 
   constructor(private productService: ProductService) { }
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
 
- /*  allProductsInCategory(catId: number): Product[] {
+  allProductsInCategory(catId: number): Product[] {
     return this.productService.list.filter(product => product.catId == catId);
   }
 
@@ -49,14 +49,11 @@ export class HomeComponent implements OnInit {
     return this.productsCategory.filter(product => product.action)
       .sort(() => 0.5 - Math.random())
       .slice(0, 5);
-  } */
+  }
 
-  
-
- /*  getCard(id: number): ProductCard {
+  getCard(id: number): ProductCard {
     const myCard = new ProductCard();
-    const myProduct = this.productService.list.find(item => item.id == id); 
-    const myProduct = this.productService.get()
+    const myProduct = this.productService.list.find(item => item.id == id);
     if (myProduct) {
       myCard.id = myProduct.id;
       myCard.author = myProduct.author;
@@ -68,7 +65,7 @@ export class HomeComponent implements OnInit {
     };
 
     return myCard;
-  } */
+  }
 
   productsWithPath(method: Function, id: number): Product[] {
     const array: any = method(id);

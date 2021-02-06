@@ -15,7 +15,10 @@ import { ProductPagingComponent } from './common/product-paging/product-paging.c
 import { FilterPipe } from './pipe/filter.pipe';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { OnActionPipe } from './pipe/on-action.pipe';
+import { RandomizePipe } from './pipe/randomize.pipe';
 import { CategoryPipe } from './pipe/category.pipe';
+import { FeaturedPipe } from './pipe/featured.pipe';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { CategoryPipe } from './pipe/category.pipe';
     FilterPipe,
     AdminComponent,
     DataEditorComponent,
-    CategoryPipe
+    OnActionPipe,
+    RandomizePipe,
+    CategoryPipe,
+    FeaturedPipe
   ],
   imports: [
     BrowserModule,

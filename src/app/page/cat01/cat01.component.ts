@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -8,29 +9,31 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./cat01.component.scss']
 })
 export class Cat01Component implements OnInit {
+  // @Input() productList$: Observable<Product[]>;
 
-
-  // topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
-  //   .sort(() => 0.5 - Math.random())
-  //   .slice(0, 5);
+  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
 
 
   // featuredList = this.topFiveFeaturedProducts;
-  // featuredList = this.allProductsInCategory(1)
-  //   .sort(() => 0.5 - Math.random())
-  //   .slice(0, 5);
-  // productList: Product[] = this.productService.list;
-  // cat01Products = this.allProductsInCategory(1);
+  featuredList = this.allProductsInCategory(1)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
+
+  productList$: Observable<Product[]> = this.productService.getAll();
+  productList: Product[] = this.productService.list;
+
+  cat01Products = this.allProductsInCategory(1);
   phrase = '';
-  catId = 1;
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
   }
 
-  // allProductsInCategory(catId: number): Product[] {
-  //   return this.productService.list.filter(product => product.catId == catId);
-  // }
+  allProductsInCategory(catId: number): Product[] {
+    return this.productService.list.filter(product => product.catId == catId);
+  }
 
   onChangePhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;

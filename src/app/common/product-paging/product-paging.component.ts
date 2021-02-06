@@ -12,6 +12,8 @@ import { Product } from 'src/app/model/product';
 export class ProductPagingComponent implements OnInit {
 
   @Input() featuredList: Product[];
+  @Input() productList: Product[];
+
   @Input() product: Product;
 
   @Input() actionProducts: Product[];

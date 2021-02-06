@@ -372,7 +372,7 @@
       "description": "Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
       "image": "assets/img/32.jpg",
       "price": 2680,
-      "stock": 0,
+      "stock": "100",
       "featured": true,
       "active": true,
       "action": false
@@ -424,7 +424,7 @@
       "description": "Sed accumsan felis. Ut at dolor quis odio consequat varius.",
       "image": "assets/img/36.jpg",
       "price": 3227,
-      "stock": 0,
+      "stock": "70",
       "featured": true,
       "active": true,
       "action": true

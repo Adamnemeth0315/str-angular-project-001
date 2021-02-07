@@ -2,14 +2,14 @@
 - Termékkép, teljes szélességében a kártya felső 30-50%-át foglalja el.
 - Alatta egymás alatt: név, rövid leírás, készlet, ár. A formázás rátok van bízva. -->
 
-<div id="juli" class="card shadow-sm mx-2 mb-3 h-100" style="width: 16rem">
+<div id="juli" class="card shadow border-dark mx-2 mb-3 h-100" style="width: 16rem">
 
-  <img src="{{origProduct.image}}" class="card-img-top" alt="book">
+  <img src="{{origProduct.image}}" class="card-img-top shadow" alt="book">
 
-  <div id="bookCardText" class="card-body d-flex flex-column text-center">
+  <div id="bookCardText" class="card-body d-flex shadow flex-column text-center">
     <h5 class="card-title ml-0  text-center">
-      <p class="card-text mb-0"><small>{{origProduct.author}}</small></p>
-      <p class="mb-0">{{origProduct.title}}</p>
+      <p class="card-text text-danger mb-0"><small>{{origProduct.author}}</small></p>
+      <p class="mb-0 text-danger">{{origProduct.title}}</p>
     </h5>
     <p>{{origProduct.description}}</p>
     <p class="mt-auto">Készleten: {{origProduct.stock}} db</p>
@@ -21,7 +21,7 @@
     <p class="my-0" [style.display]="origProduct.action ? 'none':'block'">Kedvezménymentes
     </p>
     <p [style.display]="origProduct.action ? 'none':'block'">ár: {{actionPrice}} Ft</p>
-    <p [style.display]="origProduct.action ? 'block':'none'">Kedvezményes ár: {{actionPrice}} Ft</p>
+    <p [style.display]="origProduct.action ? 'block':'none'"><strong>Kedvezményes ár: {{actionPrice}} Ft</strong></p>
 
     <!-- <a href="#" class="card-link mt-auto"><strong>Kosárba</strong></a> -->
     <a href="#" class="card-link"><strong>Kosárba</strong></a>

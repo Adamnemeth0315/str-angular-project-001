@@ -6,16 +6,21 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
  
-  transform(value: any[], phrase: string, key: string = ''): any[] {
+  transform(value: any[], phrase: string, key: string | number): any[] {
 
     if (!Array.isArray(value) || !phrase || !key) {
       return value;
     }
 
-    phrase = phrase.toLowerCase();
-    return value.filter(item => {
-      const stringItem = ('' + item[key]).toLowerCase();
-      return stringItem.includes(phrase);
+    phrase = typeof phrase !== 'number' ? ('' + phrase).toLowerCase() : phrase;
+
+    return value.filter ( item => {
+      if(typeof item[key] === 'number' && typeof phrase === 'number') {
+        return item[key] === phrase;
+      }
+
+      return ('' + item[key]).toLowerCase().includes((phrase as string) );
     })
+    
   }
 }

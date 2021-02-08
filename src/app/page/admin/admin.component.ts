@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ProductCard } from 'src/app/common/product-card';
 import { Product } from 'src/app/model/product';
 import { ConfigService } from 'src/app/service/config.service';
 import { ProductService } from 'src/app/service/product.service';
@@ -12,6 +13,8 @@ import { ProductService } from 'src/app/service/product.service';
 export class AdminComponent implements OnInit {
   productList$: Observable<Product[]> = this.productService.getAll();
   phrase: string = '';
+  filterKey: string = 'title';
+  filterKeys: string[] = Object.keys( new Product() );
 
   constructor(
     private config: ConfigService,

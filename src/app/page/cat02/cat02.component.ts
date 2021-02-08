@@ -18,6 +18,7 @@ export class Cat02Component implements OnInit {
     map( products => products.filter( product => product.catId === 2))
   );
   phrase = '';
+  filterKey= 'title';
 
   constructor(private productService: ProductService) { }
 

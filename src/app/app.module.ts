@@ -19,6 +19,7 @@ import { OnActionPipe } from './pipe/on-action.pipe';
 import { RandomizePipe } from './pipe/randomize.pipe';
 import { CategoryPipe } from './pipe/category.pipe';
 import { FeaturedPipe } from './pipe/featured.pipe';
+import { PagerPipe } from './pipe/pager.pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FeaturedPipe } from './pipe/featured.pipe';
     OnActionPipe,
     RandomizePipe,
     CategoryPipe,
-    FeaturedPipe
+    FeaturedPipe,
+    PagerPipe
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,7 @@ export class Cat01Component implements OnInit {
     map( products => products.filter( product => product.catId === 1))
   );
   phrase = '';
+  filterKey= 'title';
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {

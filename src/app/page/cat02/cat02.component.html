@@ -16,5 +16,5 @@
 
 <h3 class="text-center my-5">Teljes terméklista</h3>
 <!-- <app-product-list [phrase]="phrase" [cat02Products]="productList$ | async | category:2"></app-product-list> -->
-<app-product-list [phrase]="phrase" [productList$]="productList$ | async | filter:phrase:'title'">
+<app-product-list [phrase]="phrase" [productList$]="productList$ | async | filter:filterKey:phrase">
 </app-product-list>

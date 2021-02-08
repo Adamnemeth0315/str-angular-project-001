@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ProductCard } from 'src/app/common/product-card';
 import { Product } from 'src/app/model/product';
 import { ConfigService } from 'src/app/service/config.service';
 import { ProductService } from 'src/app/service/product.service';
@@ -12,6 +13,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class AdminComponent implements OnInit {
   productList$: Observable<Product[]> = this.productService.getAll();
   phrase: string = '';
+  
 
   constructor(
     private config: ConfigService,
@@ -29,8 +31,6 @@ export class AdminComponent implements OnInit {
     this.productService.remove(product).subscribe(() => console.log('deleted'));
   }
 
-  onChangePhrase(event: Event): void {
-    this.phrase = (event.target as HTMLInputElement).value;
-  }
+
 }
 

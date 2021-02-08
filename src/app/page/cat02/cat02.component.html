@@ -2,7 +2,7 @@
 <h1 class="text-center mt-4 mb-2">Felnőtteknek</h1>
 <h3 class="text-center mb-4">Kiemelt ajánlatunk</h3>
 
-<app-product-paging [featuredList]="productList$ | async | featured | category:2 | randomize | slice:0:5">
+<app-product-paging [productList$]="productList$ | async | featured  | randomize | slice:0:5">
 </app-product-paging>
 
 <!-- <app-product-paging [featuredList]="featuredList"></app-product-paging> -->
@@ -16,5 +16,5 @@
 
 <h3 class="text-center my-5">Teljes terméklista</h3>
 <!-- <app-product-list [phrase]="phrase" [cat02Products]="productList$ | async | category:2"></app-product-list> -->
-<app-product-list [phrase]="phrase" [productList]="productList$ | async | category:2 | filter:phrase:'title'">
+<app-product-list [phrase]="phrase" [productList$]="productList$ | async | filter:phrase:'title'">
 </app-product-list>

@@ -1,5 +1,6 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 
 
@@ -11,8 +12,7 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductPagingComponent implements OnInit {
 
-  @Input() featuredList: Product[];
-  @Input() productList: Product[];
+  @Input() productList$: Observable<Product[]>;
 
   @Input() product: Product;
 

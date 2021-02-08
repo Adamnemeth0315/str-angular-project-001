@@ -9,31 +9,10 @@ jelenjen meg egymás mellett. A menüt már megoldottam. -->
     <div class="row">
         <div class="col-12 d-flex flex-wrap justify-content-center shadow-sm">
             <!-- <div class="mb-3 mx-auto" *ngFor="let product of productList | onAction  | filter:phrase:'title'"> -->
-            <div class="mb-3" *ngFor="let product of productList">
+            <div class="mb-3" *ngFor="let product of productList$">
                 <app-product-card [product]="product"></app-product-card>
             </div>
         </div>
     </div>
-
-    <!-- <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of productList | onAction">
-            <app-product-card [product]="product"></app-product-card>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of productList | category:2 | filter:phrase:'title'">
-            <app-product-card [product]="product"></app-product-card>
-        </div>
-    </div> -->
-
-
-
-
-    <!-- <div class="row">
-        <div class="mb-3 mx-auto" *ngFor="let product of productList | category:1 | filter:phrase:'title'">
-            <app-product-card [product]="product"></app-product-card>
-        </div>
-    </div> -->
 
 </div>

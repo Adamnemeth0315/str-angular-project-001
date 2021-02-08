@@ -1,7 +1,16 @@
+<!-- Az öt terméket jeleníti meg. A főoldalon kettő, a kategória oldalakon egy van belőle,
+csak különböző termékekkel. Tehát ez jeleníti meg a főoldalon a kiemelt és akciós
+termékeket, a kategória oldalakon pedig a kategória kiemelt termékeit.
+- Működése: input tulajdonságként kapja meg az 5 terméket. *ngFor használatával
+jeleníti meg őket, minden termék egy-egy product-card komponens lesz. -->
+
+<!-- - RESZPONZIVITÁS: mobil nézetben 1, tablet nézetben 2 és asztali nézetben 5 termék
+jelenjen meg egymás mellett. A menüt már megoldottam. -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="d-flex mx-auto">
-            <div class="mb-3 mx-1" *ngFor="let product of featuredList">
+            <div class="mb-3 mx-1" *ngFor="let product of productList$">
                 <app-product-card [product]="product"></app-product-card>
             </div>
         </div>

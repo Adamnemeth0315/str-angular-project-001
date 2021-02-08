@@ -6,6 +6,12 @@ export interface IMenuItem {
   icon?: string;
 }
 
+export interface ITableCol {
+  key: string;
+  text: string;
+  editable?: boolean;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +23,19 @@ export class ConfigService {
     { text: 'Home', link: '/', icon: 'home' },
     { text: 'Ifjúsági', link: '/ifjusagi' },
     { text: 'Felnőtt', link: '/felnott' },
+    { text: 'Admin', link: '/admin' },
   ];
+
+   tableCols: ITableCol[] = [
+    {key: 'id', text: '#', editable: false},
+    {key: 'catId', text: 'CatId', editable: false},
+    {key: 'title', text: 'Title', editable: true},
+    {key: 'author', text: 'Author', editable: true},
+    {key: 'price', text: 'Price', editable: true},
+    {key: 'stock', text: 'Stock', editable: true},
+    {key: 'featured', text: 'Featured', editable: true},
+    {key: 'action', text: 'Action', editable: true}
+  ]; 
 
   constructor() { }
 }

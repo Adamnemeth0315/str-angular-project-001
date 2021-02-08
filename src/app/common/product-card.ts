@@ -1,4 +1,7 @@
+import { Input } from "@angular/core";
+import { Observable } from "rxjs";
 import { AppComponent } from "../app.component";
+import { Product } from "../model/product";
 import { ProductService } from "../service/product.service";
 
 export class ProductCard {
@@ -10,6 +13,9 @@ export class ProductCard {
     description: string;
     price: number;
     stock: number;
+    action: boolean;
+
+    // @Input() productList$: Observable<Product[]>;
 
     constructor(properties?: ProductCard) {
         if (properties) {
@@ -20,8 +26,11 @@ export class ProductCard {
             this.description = properties.description;
             this.price = properties.price;
             this.stock = properties.stock;
+            this.action = properties.action;
         }
     }
+
+
     /* productList: Product[] = this.productService.list;
     
      constructor(id: number, productService: ProductService) { 

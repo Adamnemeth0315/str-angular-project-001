@@ -1,15 +1,15 @@
 export class Product {
-    id: number;
-    catId: number;
-    title: string;
-    author: string;
-    description: string;
-    image: string;
-    price: number;
-    stock: number;
-    featured: boolean;
-    active: boolean;
-    action: boolean;
+    id: number = 0;
+    catId: number = 0;
+    title: string = '';
+    author: string = '';
+    description: string = '';
+    image: string = '';
+    price: number = 0;
+    stock: number = 0;
+    featured: boolean = false;
+    active: boolean = false;
+    action: boolean = false;
 
     constructor(properties?: Product) {
         if (properties) {

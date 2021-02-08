@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,13 @@ import { ProductCardComponent } from './common/product-card/product-card.compone
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { ProductPagingComponent } from './common/product-paging/product-paging.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { OnActionPipe } from './pipe/on-action.pipe';
+import { RandomizePipe } from './pipe/randomize.pipe';
+import { CategoryPipe } from './pipe/category.pipe';
+import { FeaturedPipe } from './pipe/featured.pipe';
+import { PagerPipe } from './pipe/pager.pipe';
 
 
 @NgModule({
@@ -23,11 +32,21 @@ import { FilterPipe } from './pipe/filter.pipe';
     ProductCardComponent,
     ProductListComponent,
     ProductPagingComponent,
-    FilterPipe
+    FilterPipe,
+    AdminComponent,
+    DataEditorComponent,
+    OnActionPipe,
+    RandomizePipe,
+    CategoryPipe,
+    FeaturedPipe,
+    PagerPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

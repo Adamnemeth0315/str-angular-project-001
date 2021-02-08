@@ -6,9 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
  
-  transform(value: any[], phrase: string, key: string | number): any[] {
+  transform(value: any[], key: string, phrase: string | number): any[] {
 
-    if (!Array.isArray(value) || !phrase || !key) {
+    if (!Array.isArray(value) || !key || !phrase) {
       return value;
     }
 

@@ -13,8 +13,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class AdminComponent implements OnInit {
   productList$: Observable<Product[]> = this.productService.getAll();
   phrase: string = '';
-  filterKey: string = 'title';
-  filterKeys: string[] = Object.keys( new Product() );
+  
 
   constructor(
     private config: ConfigService,
@@ -32,8 +31,6 @@ export class AdminComponent implements OnInit {
     this.productService.remove(product).subscribe(() => console.log('deleted'));
   }
 
-  onChangePhrase(event: Event): void {
-    this.phrase = (event.target as HTMLInputElement).value;
-  }
+
 }
 

@@ -14,6 +14,8 @@ export class DataEditorComponent implements OnInit {
 
   @Input() productList$: Observable<Product[]>;
   @Input() phrase: string = '';
+  filterKey: string = 'title';
+  filterKeys: string[] = Object.keys( new Product() );
   @Output() updateClick: EventEmitter<Product> = new EventEmitter();
   @Output() deleteClick: EventEmitter<Product> = new EventEmitter();
   cols: ITableCol[] = this.config.tableCols;
@@ -34,12 +36,8 @@ export class DataEditorComponent implements OnInit {
     this.deleteClick.emit(product);
   }
 
- /*  onUpdate(product: Product): void {
-    this.productService.update(product).subscribe(updatedProduct => console.log(updatedProduct));
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
   }
-
-  onDelete(product: Product): void {
-    this.productService.update(product).subscribe(() => console.log('deleted'));
-  } */
 
 }

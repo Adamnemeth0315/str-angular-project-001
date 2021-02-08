@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cat01',
@@ -11,29 +12,16 @@ import { ProductService } from 'src/app/service/product.service';
 export class Cat01Component implements OnInit {
   // @Input() productList$: Observable<Product[]>;
 
-  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 5);
-
-
-  // featuredList = this.topFiveFeaturedProducts;
-  featuredList = this.allProductsInCategory(1)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 5);
-
-  productList$: Observable<Product[]> = this.productService.getAll();
-  productList: Product[] = this.productService.list;
-
-  cat01Products = this.allProductsInCategory(1);
+  productList$: Observable<Product[]> = this.productService.getAll().pipe(
+    map( products => products.filter( product => product.catId === 1))
+  );
   phrase = '';
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
   }
 
-  allProductsInCategory(catId: number): Product[] {
-    return this.productService.list.filter(product => product.catId == catId);
-  }
+
 
   onChangePhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;

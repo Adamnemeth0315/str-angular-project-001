@@ -1,14 +1,14 @@
 <!-- 5 kiemelt terméket tartalmazzon, azok közül jelenjenek meg, amelyek featured tulajdonsága true. -->
 
 <h3 class="my-4 text-center">Kiemelt könyveink </h3>
-<app-product-paging [featuredList]="productList$ | async | featured | randomize | slice:0:5"></app-product-paging>
+<app-product-paging [productList$]="productList$ | async | featured | randomize | slice:0:5"></app-product-paging>
 
 <!-- - Jelenjen meg egy akcióstermék-sor a kiemelt termékek alatt, ide bármilyen random termék kerülhet, 
     szintén 5 darab legyen. -->
 
 <h3 class="my-4 text-center">Kiemelt akciós könyveink </h3>
 <!-- <app-product-list [productList]="productList | onAction | slice:0:5"></app-product-list> -->
-<app-product-paging [featuredList]="productList$ | async | onAction | randomize | slice:0:5"></app-product-paging>
+<app-product-paging [productList$]="productList$ | async | onAction | randomize | slice:0:5"></app-product-paging>
 
 <!-- <div class="input">
     <form class="form-inline my-2 my-lg-0">

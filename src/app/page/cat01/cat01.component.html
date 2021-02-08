@@ -5,7 +5,7 @@ Ezek azok a termékek amelyek az adott kategóriához tartoznak és a featured t
 
 <h3 class="text-center mb-4">Kiemelt ajánlatunk</h3>
 <!-- <app-product-paging [featuredList]="featuredList"></app-product-paging> -->
-<app-product-paging [featuredList]="productList$ | async | featured | category:1 | randomize | slice:0:5">
+<app-product-paging [productList$]="productList$ | async | featured | randomize | slice:0:5">
 </app-product-paging>
 
 <!-- - Jelenjen meg alatta a terméklista. Itt az összes termék látható legyen rácsrendszerben, amely az adott kategóriában
@@ -21,5 +21,5 @@ szűrni a termékeket, a legutóbbi feladathoz hasonlóan. -->
 </div>
 
 <h3 class="text-center my-5">Teljes terméklista</h3>
-<app-product-list [phrase]="phrase" [productList]="productList$ | async | category:1 | filter:phrase:'title'">
+<app-product-list [phrase]="phrase" [productList$]="productList$ | async  | filter:phrase:'title'">
 </app-product-list>
